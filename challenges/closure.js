@@ -1,7 +1,6 @@
-// ==== Closures ==== 
+// ==== Closures ====
 
 /* Task 1: Study the code below and explain in your own words why nested function can access the variable internal. */
-
 
 const external = "I'm outside the function";
 
@@ -11,14 +10,23 @@ function myFunction() {
 
   function nestedFunction() {
     console.log(internal);
-  };
+  }
   nestedFunction();
 }
 myFunction();
 
-// Explanation: 
-
+// Explanation: Becuase the nestedFunction is inside another function with the varible internal, it can look out from itself and find that varible to use.
 
 /* Task 2: Counter */
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+
+function summation(num1) {
+  let temp = 0;
+  for (let i = num1; i >= 0; i--) {
+    temp += i;
+  }
+  return temp;
+}
+
+console.log(summation(5));
